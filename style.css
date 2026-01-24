@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+}
+
+.page1 {
+  height: 100vh;
+  width: 100%;
+  /* background-color: lime; */
+  position: relative;
+  padding: 0 2vw;
+}
+
+.nav {
+  padding: 2yw 2vw;
+  height: 100px;
+  width: 100%;
+  /* background-color: brown; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav h1 {
+  font-size: 3vw;
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 20px 10px;
+  background-color: lime;
+  color: rgba(red, green, blue, alpha);
+}
+
+.nav-part2 {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.nav-part2 h4 {
+  padding: 10px 20px;
+  border: 1px solid#8a8a8a89;
+  border-radius: 50px;
+  font-weight: 500;
+  color: #000000bb;
+  font-size: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-part2 h4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  bottom: 100%;
+  border-radius: 50%;
+  transition: all;
+}
+
+.nav-part2 h4:hover::after {
+  border-radius: 0;
+  transition: 0;
+  bottom: 0;
+}
+
+.nav-part2 h4 a {
+  color: black;
+  position: relative;
+  text-decoration: none;
+  z-index: 9;
+}
+
+.nav-part2 h4:hover a {
+  color: #fff;
+}
+
+.center {
+  height: 65vh;
+  width: 100%;
+  /* background-color: yellowgreen; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+  padding: bottom 2.5vw;
+  ;
+}
+
+.left {
+  width: 25vw;
+  font-size: 1.8vw;
+  line-height: 2vw;
+}
+
+.right h1 {
+  font-size: 10vw;
+  text-align: right;
+  line-height: 8vw;
+  top: 15%;
+}
+
+.page1 video {
+  width: 100%;
+  border-radius: 30px;
+  margin: 1vw;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.hero1 {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  background-color: orange;
+  position: absolute;
+  filter: blur(20px);
+  right: 0;
+  top: 50%;
+  animation-name: anime1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.hero2 {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  background-color: orange;
+  position: absolute;
+  filter: blur(20px);
+  right: 0;
+  top: 50%;
+  animation-name: anime1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.hero3 {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  background-color: orange;
+  position: absolute;
+  filter: blur(20px);
+  right: 0;
+  top: 50%;
+  animation-name: anime1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes anime1 {
+  from {
+    transform: translate(-10%, 10%);
+  }
+
+  to {
+    transform: translate(10%, -10%);
+  }
+}
+
+.page2 {
+  min-height: 100vh;
+  width: 100%;
+  /* background-color: chartreuse; */
+  /* padding: 8vw 0; */
+}
+
+.moving-text {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.moving-text::-webkit-scrollbar {
+  display: none;
+}
+
+.con {
+  white-space: nowrap;
+  display: inline-block;
+  animation-name: move;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.moving-text h1 {
+  font-size: 9vw;
+  display: inline-block;
+  /* background-color: aqua; */
+}
+
+.gola {
+  height: 80px;
+  width: 80px;
+  background-color: orangered;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 1vw 2vw;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.page2-bottom {
+  height: 80vh;
+  width: 100%;
+  /* background-color: aliceblue; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page2-bottom h1 {
+  font-size: 3.5vw;
+  width: 50%;
+  line-height: 4vw;
+  z-index: 9;
+}
+
+.bottom-part2 {
+  width: 20%;
+}
+
+.bottom-part2 img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.page2-goiy {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  /* position: relative; */
+  background: linear-gradient(to top right, red, blue);
+  top: -100%;
+  left: 25%;
+  filter: blur(20px);
+  animation-name: goiy;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes goiy {
+  from {
+    transform: translate(10%, -10%) skew(0);
+
+    to {
+      transform: translate(-10%, 10%) skew(-12deg);
+    }
+  }
+}
+
+.page3 {
+  min-height: 100vh;
+  width: 100%;
+  position: absolute;
+}
+
+.elem {
+  height: 150px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* background-color: lime; */
+  border-bottom: 1px solid #000;
+  overflow: hidden;
+}
+
+.elem h1 {
+  font-size: 6vw;
+  z-index: 9;
+  right: 0;
+}
+
+.fixed-image {
+  height: 30vw;
+  width: 24vw;
+  background-color: red;
+  border-radius: 10px;
+ position: fixed;
+  z-index: 99;
+  left: 50%;
+  top: 27%;
+  display: none;
+  pointer-events: none;
+}
+
+.elem-container {
+  background-color: aqua;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: orange;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+}
+
+.elem:hover .overlay {
+  top: 0;
+}
+.loader{
+height: 100%;
+width: 100%;
+background-color:#000;
+position: absolute;
+ z-index: 999; 
+ top: 0; 
+ transition:  all ease 5s; 
+ display: flex; 
+ align-items: center;  
+justify-content: center;
+animation-name: loader;
+animation-duration: 5s; 
+
+ } 
+ .loader h1{
+  font-size: 4vw;
+  color: transparent;
+  background: linear-gradient(to right, orange, orangered);
+  -webkit-background-clip: text; 
+  opacity: 0;
+  animation-name: loader;
+  animation-duration: 1s;
+  position: absolute;
+ } 
+ .loader h1:nth-child(2){ 
+   animation-delay: 2s; 
+ } 
+ .loader h1:nth-child(3){ 
+   animation-delay: 3s; 
+ } 
+@keyframes loader{
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+} 
