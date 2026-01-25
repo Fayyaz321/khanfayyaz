@@ -35,12 +35,15 @@ body {
 }
 
 .nav h1 {
-  font-size: 3vw;
+  font-size: 4vw;
   border: 1px solid #000;
   border-radius: 50%;
   padding: 20px 10px;
-  background-color: lime;
-  color: rgba(red, green, blue, alpha);
+  /* background-color: lime; */
+  background:linear-gradient(to right, red, green, blue);
+  /* -webkit-background-clip: text; */
+  margin-top: auto;
+  padding: 2vw;
 }
 
 .nav-part2 {
@@ -108,20 +111,22 @@ body {
 }
 
 .right h1 {
-  font-size: 10vw;
+  font-size: 6vw;
   text-align: right;
   line-height: 8vw;
   top: 15%;
+  z-index: 999;
+  position: relative;
 }
 
 .page1 video {
   width: 100%;
   border-radius: 30px;
   margin: 1vw;
-  max-width: 400px;
+  /* max-width: 400px;
   height: auto;
   display: block;
-  margin: auto;
+  margin: auto; */
 }
 
 .hero1 {
@@ -309,6 +314,7 @@ body {
 .fixed-image {
   height: 30vw;
   width: 24vw;
+  object-fit: cover;
   background-color: red;
   border-radius: 10px;
  position: fixed;
@@ -321,6 +327,7 @@ body {
 
 .elem-container {
   background-color: aqua;
+  white-space: nowrap;
 }
 
 .overlay {
@@ -342,12 +349,12 @@ background-color:#000;
 position: absolute;
  z-index: 999; 
  top: 0; 
- transition:  all ease 5s; 
+ transition:  all ease 6s; 
  display: flex; 
  align-items: center;  
 justify-content: center;
 animation-name: loader;
-animation-duration: 5s; 
+animation-duration: 6s; 
 
  } 
  .loader h1{
@@ -357,7 +364,7 @@ animation-duration: 5s;
   -webkit-background-clip: text; 
   opacity: 0;
   animation-name: loader;
-  animation-duration: 1s;
+  animation-duration: 1.5s;
   position: absolute;
  } 
  .loader h1:nth-child(2){ 
