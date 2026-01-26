@@ -105,9 +105,10 @@ body {
 }
 
 .left {
+  font-weight: lighter;
   width: 25vw;
   font-size: 1.8vw;
-  line-height: 2vw;
+  line-height: 3vw;
 }
 
 .right h1 {
@@ -117,6 +118,7 @@ body {
   top: 15%;
   z-index: 999;
   position: relative;
+  font-weight: bold;
 }
 
 .page1 video {
@@ -144,7 +146,6 @@ body {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-
 .hero2 {
   height: 30vw;
   width: 30vw;
@@ -312,9 +313,9 @@ body {
 }
 
 .fixed-image {
-  height: 30vw;
-  width: 24vw;
-  object-fit: cover;
+  height: 40vw;
+  width: 34vw;
+  background-position: center;
   background-color: red;
   border-radius: 10px;
  position: fixed;
