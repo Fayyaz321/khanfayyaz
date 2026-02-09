@@ -10,6 +10,14 @@ body {
   height: 100%;
   width: 100%;
 }
+.animated-box {
+  width: 50%;
+  height: 200px;
+  margin: 40px auto;
+  background: linear-gradient(to right, orange, orangered);
+  border-radius: 20px;
+}
+
 /* General container */
 .container {
   width: 90%;

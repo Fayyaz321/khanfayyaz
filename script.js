@@ -1,63 +1,72 @@
-var elemC = document.querySelector(".elem-container")
-var fixed = document.querySelector(".fixed-image")
+// ================= Fixed Image Hover =================
+const elemC = document.querySelector(".elem-container");
+const fixed = document.querySelector(".fixed-image");
 
-elemC.addEventListener("mouseenter",function () {
-    fixed.style.display = "block"
-})
+if (elemC && fixed) {
+  elemC.addEventListener("mouseenter", () => {
+    fixed.style.display = "block";
+  });
 
-elemC.addEventListener("mouseleave",function () {
-    fixed.style.display = "none"
-})
+  elemC.addEventListener("mouseleave", () => {
+    fixed.style.display = "none";
+  });
 
-var elems = document.querySelectorAll(".elem")
-
-elems.forEach(function (e) {
-    e.addEventListener("mouseenter", function (){
-        var image = e.getAttribute("data-image")
-        fixed.style.backgroundImage = `url("${image}")`
-    })
-})
-var loader = document.querySelector(".loader");
-setTimeout(function(){
-    loader.style.top = "-100%"
-},3000)
-
-// 1. Responsive animation speed
-let screenWidth = window.innerWidth;
-let animationSpeed;
-if(screenWidth < 768) {
-    animationSpeed = 1000; // mobile: slower
-} else if(screenWidth < 1200) {
-    animationSpeed = 700;  // tablet: medium
-} else {
-    animationSpeed = 500;  // desktop: faster
+  document.querySelectorAll(".elem").forEach((e) => {
+    e.addEventListener("mouseenter", () => {
+      fixed.style.backgroundImage = `url(${e.dataset.image})`;
+    });
+  });
 }
 
-// 2. Responsive element size
-let animatedBox = document.querySelector('.animated-box');
+// ================= Loader =================
+const loader = document.querySelector(".loader");
+if (loader) {
+  setTimeout(() => {
+    loader.style.top = "-100%";
+  }, 3000);
+}
 
-function resizeBox() {
-    let width = window.innerWidth;
-    if(width < 768) {
-        animatedBox.style.width = '90%';
-        animatedBox.style.height = '150px';
-    } else if(width < 1200) {
-        animatedBox.style.width = '70%';
-        animatedBox.style.height = '200px';
+// ================= Animated Box =================
+const animatedBox = document.querySelector(".animated-box");
+
+if (animatedBox) {
+
+  function resizeBox() {
+    const width = window.innerWidth;
+
+    if (width < 768) {
+      animatedBox.style.width = "90%";
+      animatedBox.style.height = "150px";
+    } else if (width < 1200) {
+      animatedBox.style.width = "70%";
+      animatedBox.style.height = "200px";
     } else {
-        animatedBox.style.width = '50%';
-        animatedBox.style.height = '250px';
+      animatedBox.style.width = "50%";
+      animatedBox.style.height = "250px";
     }
-}
+  }
 
-resizeBox();
-window.addEventListener('resize', resizeBox);
+  resizeBox();
+  window.addEventListener("resize", resizeBox);
 
-// 3. Responsive animation distance
-function animateBox() {
-    let width = window.innerWidth;
-    let distance;
+  function animateBox() {
+    const distance =
+      window.innerWidth < 768 ? 80 :
+      window.innerWidth < 1200 ? 120 : 160;
 
-    if(width < 768) distance = 100;    // mobile
-    else if(width < 1200) distance
+    animatedBox.animate(
+      [
+        { transform: "translateX(0px)" },
+        { transform: `translateX(${distance}px)` }
+      ],
+      {
+        duration: 800,
+        direction: "alternate",
+        iterations: Infinity,
+        easing: "ease-in-out"
+      }
+    );
+  }
+
+  animateBox();
 }
