@@ -23,7 +23,7 @@ const loader = document.querySelector(".loader");
 if (loader) {
   setTimeout(() => {
     loader.style.top = "-100%";
-  }, 3000);
+  }, 2500);
 }
 
 // ================= Animated Box =================

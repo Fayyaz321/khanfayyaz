@@ -391,6 +391,17 @@ h1, h2, h3, p {
 .elem:hover .overlay {
   top: 0;
 }
+.fixed-image {
+  position: fixed;
+  left: 50%;
+  top: 27%;
+  transform: translateX(-50%); /* horizontal center */
+  z-index: 99;
+  width: 34vw;
+  height: 40vw;
+  display: none; /* ensure visible */
+}
+
 .loader{
 height: 100%;
 width: 100%;
