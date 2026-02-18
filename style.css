@@ -10,6 +10,7 @@ body {
   height: 100%;
   width: 100%;
 }
+
 .animated-box {
   width: 50%;
   height: 200px;
@@ -21,18 +22,22 @@ body {
 /* General container */
 .container {
   width: 90%;
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 /* Images and videos */
-img, video {
+img,
+video {
   max-width: 100%;
   height: auto;
 }
 
 /* Text responsive */
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   font-size: clamp(16px, 2vw, 32px);
 }
 
@@ -41,17 +46,23 @@ h1, h2, h3, p {
   .container {
     padding: 10px;
   }
+
   nav {
     flex-direction: column;
   }
+
   .animated-section {
     font-size: 14px;
   }
-  form input, form button {
+
+  form input,
+  form button {
     width: 100%;
     font-size: 14px;
   }
-  .prev, .next {
+
+  .prev,
+  .next {
     padding: 5px;
     font-size: 12px;
   }
@@ -62,19 +73,18 @@ h1, h2, h3, p {
   width: 100%;
 }
 
+/* ===== PAGE 1 ===== */
 .page1 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  /* background-color: lime; */
-  position: relative;
   padding: 0 2vw;
+  position: relative;
 }
 
 .nav {
-  padding: 2yw 2vw;
+  padding: 2vw;
   height: 100px;
   width: 100%;
-  /* background-color: brown; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,10 +94,7 @@ h1, h2, h3, p {
   font-size: 4vw;
   border: 1px solid #000;
   border-radius: 50%;
-  padding: 20px 10px;
-  /* background-color: lime; */
-  background:linear-gradient(to right, red, green, blue);
-  /* -webkit-background-clip: text; */
+  background: linear-gradient(to right, red, green, blue);
   margin-top: auto;
   padding: 2vw;
 }
@@ -100,7 +107,7 @@ h1, h2, h3, p {
 
 .nav-part2 h4 {
   padding: 10px 20px;
-  border: 1px solid#8a8a8a89;
+  border: 1px solid #8a8a8a89;
   border-radius: 50px;
   font-weight: 500;
   color: #000000bb;
@@ -114,16 +121,15 @@ h1, h2, h3, p {
   position: absolute;
   height: 100%;
   width: 100%;
-  background:linear-gradient(to right, green, yellowgreen, yellow);
+  background-color: #000;
   left: 0;
-  bottom: 100%;
+  bottom: -100%;
   border-radius: 50%;
-  transition: all;
+  transition: all 0.3s ease;
 }
 
 .nav-part2 h4:hover::after {
   border-radius: 0;
-  transition: 0;
   bottom: 0;
 }
 
@@ -141,17 +147,14 @@ h1, h2, h3, p {
 .center {
   height: 65vh;
   width: 100%;
-  /* background-color: yellowgreen; */
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   border-bottom: 1px solid #000;
-  padding: bottom 2.5vw;
-  ;
 }
 
 .left {
-  font-weight: lighter;
+  font-weight: 500;
   width: 25vw;
   font-size: 1.8vw;
   line-height: 3vw;
@@ -160,56 +163,26 @@ h1, h2, h3, p {
 .right h1 {
   font-size: 6vw;
   text-align: right;
-  line-height: 8vw;
+  line-height: 5vw;
   top: 15%;
-  z-index: 999;
   position: relative;
+  z-index: 999;
   font-weight: bold;
 }
 
-.page1 video {
+.page-1 video {
   width: 100%;
+  height: 100%;
   border-radius: 30px;
-  margin: 1vw;
-  /* max-width: 400px;
-  height: auto;
-  display: block;
-  margin: auto; */
+  margin-top: 2vw;
+  z-index: 0;
+  position: relative;
+  object-fit: cover;
+  padding: 2vw;
 }
 
-.hero1 h1{
-  height: 30vw;
-  width: 30vw;
-  border-radius: 50%;
-  background-color: orange;
-  position: absolute;
-  filter: blur(20px);
-  right: 0;
-  top: 50%;
-  z-index: 999;
-  color: black;
-  animation-name: anime1;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-.hero2 {
-  height: 30vw;
-  width: 30vw;
-  border-radius: 50%;
-  background-color: orange;
-  position: absolute;
-  filter: blur(20px);
-  right: 0;
-  top: 50%;
-  animation-name: anime1;
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
+.hero1,
+.hero2,
 .hero3 {
   height: 30vw;
   width: 30vw;
@@ -228,24 +201,26 @@ h1, h2, h3, p {
 
 @keyframes anime1 {
   from {
-    transform: translate(-10%, 10%);
+    transform: translate(-10%, 10%) skew(0);
   }
 
   to {
-    transform: translate(10%, -10%);
+    transform: translate(10%, -10%) skew(-12deg);
   }
 }
 
+/* ===== PAGE 2 ===== */
 .page2 {
   min-height: 100vh;
   width: 100%;
-  /* background-color: chartreuse; */
-  /* padding: 8vw 0; */
+  position: relative;
+  padding-top: 2vw;
 }
 
 .moving-text {
   white-space: nowrap;
   overflow-x: auto;
+  position: relative;
 }
 
 .moving-text::-webkit-scrollbar {
@@ -265,12 +240,12 @@ h1, h2, h3, p {
 .moving-text h1 {
   font-size: 9vw;
   display: inline-block;
-  /* background-color: aqua; */
+  margin-top: 1vw;
 }
 
 .gola {
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
   background-color: orangered;
   border-radius: 50%;
   display: inline-block;
@@ -290,10 +265,11 @@ h1, h2, h3, p {
 .page2-bottom {
   height: 80vh;
   width: 100%;
-  /* background-color: aliceblue; */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 2vh;
+  padding-top: 2vw;
 }
 
 .page2-bottom h1 {
@@ -316,7 +292,8 @@ h1, h2, h3, p {
   height: 30vw;
   width: 30vw;
   border-radius: 50%;
-  /* position: relative; */
+  position: relative;
+  z-index: 1;
   background: linear-gradient(to top right, red, blue);
   top: -100%;
   left: 25%;
@@ -330,17 +307,17 @@ h1, h2, h3, p {
 @keyframes goiy {
   from {
     transform: translate(10%, -10%) skew(0);
+  }
 
-    to {
-      transform: translate(-10%, 10%) skew(-12deg);
-    }
+  to {
+    transform: translate(-10%, 10%) skew(-12deg);
   }
 }
 
+/* ===== PAGE 3 ===== */
 .page3 {
   min-height: 100vh;
   width: 100%;
-  position: absolute;
 }
 
 .elem {
@@ -349,7 +326,6 @@ h1, h2, h3, p {
   position: relative;
   display: flex;
   align-items: center;
-  /* background-color: lime; */
   border-bottom: 1px solid #000;
   overflow: hidden;
 }
@@ -364,9 +340,11 @@ h1, h2, h3, p {
   height: 40vw;
   width: 34vw;
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: red;
   border-radius: 10px;
- position: fixed;
+  position: fixed;
   z-index: 99;
   left: 50%;
   top: 27%;
@@ -391,62 +369,174 @@ h1, h2, h3, p {
 .elem:hover .overlay {
   top: 0;
 }
-.fixed-image {
+
+/* ===== LOADER ===== */
+.loader {
+  height: 100%;
+  width: 100%;
   position: fixed;
-  left: 50%;
-  top: 27%;
-  transform: translateX(-50%); /* horizontal center */
-  z-index: 99;
-  width: 34vw;
-  height: 40vw;
-  display: none; /* ensure visible */
+  top: 0;
+  background-color: #000;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.5s;
 }
 
-.loader{
-height: 100%;
-width: 100%;
-background-color:#000;
-position: absolute;
- z-index: 999; 
- top: 0; 
- transition:  all ease 6s; 
- display: flex; 
- align-items: center;  
-justify-content: center;
-animation-name: loader;
-animation-duration: 6s; 
-
- } 
- .loader h1{
+.loader h1 {
+  position: absolute;
   font-size: 4vw;
   color: transparent;
   background: linear-gradient(to right, orange, orangered);
-  -webkit-background-clip: text; 
+  -webkit-background-clip: text;
   opacity: 0;
+  animation: textFade 1s ease forwards;
+}
+
+.loader h1:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.loader h1:nth-child(2) {
   animation-name: loader;
-  animation-duration: 1s;
-  /* animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; */
-  position: absolute; 
- } 
- .loader h1:nth-child(2){ 
-   animation-delay: 2s; 
- } 
- .loader h1:nth-child(3){ 
-   animation-delay: 3s; 
- } 
-@keyframes loader{
-  0%{
+  animation-delay: 2s;
+}
+
+.loader h1:nth-child(3) {
+  animation-delay: 3s;
+}
+
+@keyframes textFade {
+  0% {
     opacity: 0;
   }
-  10%{
+
+  20% {
     opacity: 1;
   }
-  90%{
+
+  80% {
     opacity: 1;
   }
-  100%{
+
+  100% {
     opacity: 0;
   }
-} 
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ================= MOBILE & TABLET RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    height: auto;
+    text-align: center;
+  }
+
+  .nav h1 {
+    font-size: clamp(28px, 8vw, 42px);
+  }
+
+  .nav-part2 {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .nav-part2 h4 {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  /* HERO SECTION */
+  .center {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  .left {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .right h1 {
+    font-size: clamp(36px, 10vw, 64px);
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  /* VIDEO */
+  .page-1 video {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+  }
+
+  /* PAGE 2 */
+  .page2-bottom {
+    flex-direction: column;
+    height: auto;
+    gap: 24px;
+  }
+
+  .page2-bottom h1 {
+    width: 100%;
+    font-size: clamp(20px, 4vw, 32px);
+    line-height: 1.4;
+  }
+
+  .bottom-part2 {
+    width: 100%;
+  }
+
+  /* MOVING TEXT */
+  .moving-text h1 {
+    font-size: clamp(32px, 12vw, 80px);
+  }
+
+  .gola {
+    height: 40px;
+    width: 40px;
+  }
+
+  /* PAGE 3 */
+  .elem {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .elem h1 {
+    font-size: clamp(24px, 7vw, 48px);
+  }
+
+  /* DISABLE HOVER IMAGE ON MOBILE */
+  .fixed-image {
+    display: none !important;
+  }
+}
