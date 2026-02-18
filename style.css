@@ -88,15 +88,17 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: lime;
+  margin-top: 1.5vw;
 }
 
 .nav h1 {
-  font-size: 4vw;
+  font-size: 3vw;
   border: 1px solid #000;
   border-radius: 50%;
   background: linear-gradient(to right, red, green, blue);
-  margin-top: auto;
-  padding: 2vw;
+  margin-top: 0.5vh;
+  padding: 1vw;
 }
 
 .nav-part2 {
@@ -337,8 +339,8 @@ p {
 }
 
 .fixed-image {
-  height: 40vw;
-  width: 34vw;
+  height: 30vw;
+  width: 28vw;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
