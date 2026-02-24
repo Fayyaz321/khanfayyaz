@@ -32,11 +32,17 @@ Designed to work smoothly on **desktop, tablet, and mobile devices**.
 
 ## 📸 Preview
 
-![Desktop View](Screenshots.prewieo1.png)  
+### 💻 Desktop View
 
-![Tablet View](Screenshots.prewieo2.png)  
+![Desktop View](Screenshots.preview1.png.png)
 
-![Mobile View](Screenshots.preview3.png)
+### 📱 Tablet View
+
+![Tablet View](Screenshots.preview2.png.png)
+
+### 📲 Mobile View
+
+![Mobile View](screenshots/Screenshots.preview3.png)
 
 ---
 
