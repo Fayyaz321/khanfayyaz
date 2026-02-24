@@ -2,7 +2,6 @@ var elemC = document.querySelector(".elem-container");
 var fixed = document.querySelector(".fixed-image");
 var elems = document.querySelectorAll(".elem");
 
-/* Disable hover preview on mobile */
 if (window.innerWidth > 768) {
 
   elemC.addEventListener("mouseenter", function () {
@@ -20,7 +19,6 @@ if (window.innerWidth > 768) {
   });
 }
 
-/* Loader */
 window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
 
