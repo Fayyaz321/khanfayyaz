@@ -34,7 +34,7 @@ Designed to work smoothly on **desktop, tablet, and mobile devices**.
 
 ### 💻 Desktop View
 
-![Desktop View](Screenshots.preview1.png-2.png)
+![Desktop View](Screenshots.preview1.png-4.png)
 
 ### 📱 Tablet View
 
