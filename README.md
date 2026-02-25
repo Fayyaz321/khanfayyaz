@@ -34,11 +34,11 @@ Designed to work smoothly on **desktop, tablet, and mobile devices**.
 
 ### 💻 Desktop View
 
-![Desktop View](screenshots/Screenshots.preview1.png)
+![Desktop View](Screenshots.preview1.png-2.png)
 
 ### 📱 Tablet View
 
-![Tablet View](screenshots/Screenshots.preview2.png)
+![Tablet View](Screenshots.preview2.png-2.png)
 
 ### 📲 Mobile View
 
