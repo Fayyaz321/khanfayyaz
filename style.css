@@ -344,7 +344,7 @@ p {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: red;
+  /* background-color: red; */
   border-radius: 10px;
   position: fixed;
   z-index: 99;
