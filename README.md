@@ -83,5 +83,5 @@ The website is fully responsive and works smoothly on:
 - 📱 Tablets
 - 📲 Mobile phones
 
-This project is ideal for **beginners and intermediate developers** who want to learn how to build
+This project is ideal for **developers** who want to learn how to build
 a clean, fast, and animated responsive website.
