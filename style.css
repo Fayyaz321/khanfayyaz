@@ -194,9 +194,9 @@ p {
   position: absolute;
   filter: blur(20px);
   right: 0;
-  top: 50%;
+  top: 10%;
   animation-name: anime1;
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -301,7 +301,7 @@ p {
   left: 25%;
   filter: blur(20px);
   animation-name: goiy;
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
